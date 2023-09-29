@@ -28,7 +28,7 @@ jobs:
           pwd
           ls -la
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@releases/v4.4.3
+        uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           branch: main
