@@ -21,11 +21,12 @@ jobs:
             ${{ runner.os }}-node-
       - name: Build
         run: |
+          cd portfolio-page
           npm install
-          npm run-script deploy
+          npm run build
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: dist/angular-ci-cd
+          FOLDER: dist/portfolio-page
