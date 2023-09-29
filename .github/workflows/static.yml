@@ -13,12 +13,12 @@ jobs:
       - uses: actions/setup-node@v1 #this installs node and npm for us
         with:
           node-version: '17.x'
-      - uses: actions/cache@v1
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+#      - uses: actions/cache@v1
+#        with:
+#          path: ~/.npm
+#          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+#          restore-keys: |
+#            ${{ runner.os }}-node-
       - name: Build
         run: |
           cd portfolio-page
@@ -29,5 +29,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
+          BRANCH: main
           FOLDER: dist/portfolio-page
