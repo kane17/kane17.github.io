@@ -14,13 +14,19 @@ import {MatTabsModule} from "@angular/material/tabs";
 import { CryptoCapComponent } from './crypto-cap/crypto-cap.component';
 import {RouterLink} from "@angular/router";
 import {MatGridListModule} from "@angular/material/grid-list";
+import { PokemonComponent } from './pokemon/pokemon.component';
+import {MatInputModule} from "@angular/material/input";
+import {MatIconModule} from "@angular/material/icon";
+import {FormsModule} from "@angular/forms";
+import {NgOptimizedImage} from "@angular/common";
 
 @NgModule({
     declarations: [
         AppComponent,
         DadJokeComponent,
         AboutMeComponent,
-        CryptoCapComponent
+        CryptoCapComponent,
+        PokemonComponent
     ],
     imports: [
         BrowserModule,
@@ -32,7 +38,11 @@ import {MatGridListModule} from "@angular/material/grid-list";
         BrowserAnimationsModule,
         MatTabsModule,
         RouterLink,
-        MatGridListModule
+        MatGridListModule,
+        MatInputModule,
+        MatIconModule,
+        FormsModule,
+        NgOptimizedImage
     ],
     providers: [],
     bootstrap: [AppComponent]
