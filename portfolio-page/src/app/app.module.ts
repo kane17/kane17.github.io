@@ -9,11 +9,18 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {HttpClientModule} from "@angular/common/http";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { AboutMeComponent } from './about-me/about-me.component';
+import {MatTabsModule} from "@angular/material/tabs";
+import { CryptoCapComponent } from './crypto-cap/crypto-cap.component';
+import {RouterLink} from "@angular/router";
+import {MatGridListModule} from "@angular/material/grid-list";
 
 @NgModule({
     declarations: [
         AppComponent,
-        DadJokeComponent
+        DadJokeComponent,
+        AboutMeComponent,
+        CryptoCapComponent
     ],
     imports: [
         BrowserModule,
@@ -22,7 +29,10 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
         MatButtonModule,
         MatSnackBarModule,
         HttpClientModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        MatTabsModule,
+        RouterLink,
+        MatGridListModule
     ],
     providers: [],
     bootstrap: [AppComponent]

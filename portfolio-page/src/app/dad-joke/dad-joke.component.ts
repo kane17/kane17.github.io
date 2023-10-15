@@ -1,30 +1,28 @@
-import { Component } from '@angular/core';
-import {MatDialog} from "@angular/material/dialog";
+import {Component} from '@angular/core';
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {Observable} from "rxjs";
 import {DadJoke} from "./interface/dad-joke";
 
 @Component({
-  selector: 'app-dad-joke',
-  templateUrl: './dad-joke.component.html',
-  styleUrls: ['./dad-joke.component.scss']
+    selector: 'app-dad-joke',
+    templateUrl: './dad-joke.component.html',
+    styleUrls: ['./dad-joke.component.scss']
 })
 export class DadJokeComponent {
 
-  constructor(private _snackBar: MatSnackBar, private http: HttpClient) {
-  }
+    public joke: string = "";
 
-  displayDadJoke() {
-    this.getDadJoke().subscribe(
-        result => {this._snackBar.open(result.joke, "Haha!", {
-          horizontalPosition: "center",
-          verticalPosition: "top",
-        })}
-    );
-  }
+    constructor(private _snackBar: MatSnackBar, private http: HttpClient) {
+        this.refreshDadJoke();
+    }
 
-  private getDadJoke() {
-    return this.http.get<DadJoke>("https://icanhazdadjoke.com/", {headers: new HttpHeaders("Accept: application/json")});
-  }
+    public refreshDadJoke() {
+        this.getDadJoke().subscribe(resp => {
+            this.joke = resp.joke;
+        })
+    }
+
+    private getDadJoke() {
+        return this.http.get<DadJoke>("https://icanhazdadjoke.com/", {headers: new HttpHeaders("Accept: application/json")});
+    }
 }

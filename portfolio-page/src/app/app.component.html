@@ -1,8 +1,21 @@
 <mat-toolbar color="primary">
   <span>Keijo's Portfolio</span>
 </mat-toolbar>
-<mat-card>
+<mat-card id="background-card">
   <mat-card-content>
-    <app-dad-joke></app-dad-joke>
+    <app-about-me></app-about-me>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <mat-grid-list cols="3">
+      <mat-grid-tile>
+        <app-dad-joke></app-dad-joke>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <app-crypto-cap></app-crypto-cap>
+      </mat-grid-tile>
+    </mat-grid-list>
   </mat-card-content>
 </mat-card>
