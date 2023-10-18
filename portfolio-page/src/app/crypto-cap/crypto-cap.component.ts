@@ -9,7 +9,6 @@ import {Observable} from "rxjs";
 })
 export class CryptoCapComponent {
 
-
   public btcPrice: number = 0;
   public ethPrice: number = 0;
   public btcSupply: number = 0;
@@ -21,7 +20,6 @@ export class CryptoCapComponent {
 
   public getCryptoInfo() {
     this.fetchApi().subscribe(resp => {
-      console.log(resp)
       this.btcPrice = resp["data"][0]["priceUsd"];
       this.ethPrice = resp["data"][1]["priceUsd"];
       this.btcSupply = resp["data"][0]["supply"];
