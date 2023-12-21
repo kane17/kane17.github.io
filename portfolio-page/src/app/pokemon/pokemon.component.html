@@ -1,10 +1,10 @@
 <mat-card class="widget">
-    <mat-card-header>
+    <mat-card-header class="center-card-elements">
         <mat-card-title>Enter your favorite Pokémon (in English):</mat-card-title>
     </mat-card-header>
     <br>
     <mat-card-content>
-        <mat-form-field>
+        <mat-form-field class="responsive-input">
             <mat-label>Pokémon Name</mat-label>
             <input matInput type="text" [(ngModel)]="name">
             <button *ngIf="name != ''" matSuffix mat-icon-button aria-label="Clear" (click)="name=''">
@@ -12,10 +12,11 @@
             </button>
             <mat-error *ngIf="error != ''">{{error}}</mat-error>
         </mat-form-field>
-        <img *ngIf="image" [src]="image" style="width: 60%" alt="Pokemon Image"/>
+      <br>
+        <img *ngIf="image" [src]="image" style="width: 15%" alt="Pokemon Image"/>
     </mat-card-content>
     <br>
-    <mat-card-actions>
-        <button (click)="getPokemon()" mat-button color="accent" [disabled]="name == ''">Search</button>
+    <mat-card-actions class="center-card-elements">
+        <button (click)="getPokemon()" mat-raised-button color="accent" [disabled]="name == ''">Search</button>
     </mat-card-actions>
 </mat-card>

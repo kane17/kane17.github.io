@@ -10,8 +10,9 @@ export class NationalityGuessingComponent {
   name: any;
   error: string = '';
   apiGuess: any = {};
-  displayGuess: any = {};
+  displayGuess: {german: string, probability: number, id: string}[] = [];
   countryCodes: {[key: string]: string} = {};
+  displayedColumns: string[] = ['german', 'probability'];
 
   constructor(private http: HttpClient) {
     this.http.get<any>('../../assets/i18n/de.json').subscribe(data => {
@@ -32,19 +33,18 @@ export class NationalityGuessingComponent {
 
   private displayResults() {
     let apiCountries: [] = this.apiGuess['country']
+    this.displayGuess = [];
     apiCountries.forEach(entry => {
       let upperCase: string = entry['country_id']
       let countryLower = upperCase.toLowerCase()
-      this.displayGuess[countryLower] = {id: countryLower, german: this.getGermanName(countryLower), probability: entry['probability']}
+      this.displayGuess.push({id: countryLower, german: this.getGermanName(countryLower), probability: entry['probability']});
     })
-    console.log(this.displayGuess)
-    // console.log(apiCountries)
-    // console.log(this.apiGuess)
-    // console.log(this.apiGuess['country'])
-    //this.displayGuess['countries']
   }
 
   getGermanName(country: string): string {
+    if (this.countryCodes[country] == undefined) {
+      return country;
+    }
     return this.countryCodes[country];
   }
 }

@@ -5,6 +5,44 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 
 .widget {
-  //width: 150%;
-  max-width: 300px;
+  margin: 0 auto;
+  height: 500px;
+  text-align: center;
+}
+
+@media screen and (min-width: 320px) {
+  .widget {
+    width: 200px;
+    max-width: 200px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .widget {
+    width: 700px;
+    max-width: 600px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .widget {
+    width: 800px;
+    max-width: 800px;
+  }
+}
+
+.content-card {
+  margin: 5%;
+  max-width: 95%;
+}
+
+.center-card-elements {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.responsive-input {
+  width: 100%;
+  max-width: 500px; // Change this to your desired maximum width
 }

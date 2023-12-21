@@ -1,0 +1,12 @@
+<mat-card class="content-card">
+  <mat-card-content class="center-content">
+    <button mat-raised-button color="primary" (click)="selectRandomWidget()">Zufälliges Widget</button>
+  </mat-card-content>
+  <br>
+  <mat-card-content class="center-content">
+    <app-nationality-guessing *ngIf="selectedWidget == 'nationality'"></app-nationality-guessing>
+    <app-dad-joke *ngIf="selectedWidget == 'joke'"></app-dad-joke>
+    <app-pokemon *ngIf="selectedWidget == 'pokemon'"></app-pokemon>
+    <app-crypto-cap *ngIf="selectedWidget == 'crypto'"></app-crypto-cap>
+  </mat-card-content>
+</mat-card>

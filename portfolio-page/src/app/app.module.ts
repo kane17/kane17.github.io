@@ -23,6 +23,9 @@ import { NationalityGuessingComponent } from './nationality-guessing/nationality
 import {MatListModule} from "@angular/material/list";
 import {MatSliderModule} from "@angular/material/slider";
 import {MatProgressBarModule} from "@angular/material/progress-bar";
+import { WidgetChooserComponent } from './widget-chooser/widget-chooser.component';
+import {MatTableModule} from "@angular/material/table";
+import { ProbabilityMultiplierPipe } from './probability-multiplier.pipe';
 
 @NgModule({
     declarations: [
@@ -31,7 +34,9 @@ import {MatProgressBarModule} from "@angular/material/progress-bar";
         AboutMeComponent,
         CryptoCapComponent,
         PokemonComponent,
-        NationalityGuessingComponent
+        NationalityGuessingComponent,
+        WidgetChooserComponent,
+        ProbabilityMultiplierPipe
     ],
   imports: [
     BrowserModule,
@@ -50,7 +55,8 @@ import {MatProgressBarModule} from "@angular/material/progress-bar";
     NgOptimizedImage,
     MatListModule,
     MatSliderModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatTableModule
   ],
     providers: [],
     bootstrap: [AppComponent]
