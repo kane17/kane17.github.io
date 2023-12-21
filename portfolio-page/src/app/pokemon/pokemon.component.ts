@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { PokemonClient } from 'pokenode-ts';
+import {Component} from '@angular/core';
+import {PokemonClient} from 'pokenode-ts';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {DomSanitizer, SafeUrl} from "@angular/platform-browser";
 import {Observable} from "rxjs";
@@ -15,17 +15,21 @@ export class PokemonComponent {
   public name: string = "";
   public error: string = "";
   public image: SafeUrl | null = null;
+  private pokemonNames: PokemonName[] = [];
 
   constructor(public _http: HttpClient, public sanitizer: DomSanitizer) {
     this.pokeClient = new PokemonClient();
+    this._http.get<any>('assets/i18n/pokemon_kanto.json').subscribe(data => {
+      this.pokemonNames = data['pokemon_kanto'];
+    })
   }
 
-  public getPokemon(){
-    this.pokeClient.getPokemonByName(this.name)
-        .then((data) => {
-          this.fetchImage(data.sprites.front_default);
-        })
-        .catch((error) => this.error = "Pokemon " + this.name + " not found");
+  public getPokemon() {
+    this.pokeClient.getPokemonByName(this.getEnglishName())
+      .then((data) => {
+        this.fetchImage(data.sprites.front_default);
+      })
+      .catch((error) => this.error = "Pokemon " + this.name + " not found");
   }
 
   private fetchImage(url: string | null) {
@@ -46,4 +50,18 @@ export class PokemonComponent {
     }
   }
 
+  private getEnglishName() {
+    let englishName = this.name;
+    this.pokemonNames.forEach((pokemonName) => {
+      if (pokemonName.german_name === this.name) {
+        englishName = pokemonName.name;
+      }
+    });
+    return englishName;
+  }
+}
+
+export interface PokemonName {
+  name: string;
+  german_name: string;
 }
