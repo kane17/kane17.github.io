@@ -1,6 +1,7 @@
 # Keijo's Portfolio
  
-Willkommen auf meiner Portfolio Seite im Rahmen des Moduls EWEB an der BFH. 
+Willkommen auf meiner Portfolio Seite im Rahmen des Moduls EWEB an der BFH. <br>
+Die Seite ist unter folgendem Link erreichbar: [https://kane17.github.io/portfolio-page/](https://kane17.github.io/portfolio-page/)
 
 # Features
 - Automatischer Dark oder Light Mode Theme abhängig von den Systemeinstellungen

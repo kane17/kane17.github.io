@@ -19,3 +19,29 @@
 mat-list-item {
   height: auto !important;
 }
+
+.my-picture {
+  width: 200px;
+  border-radius: 50%; // to make the image circular
+
+  @media only screen and (max-width: 600px) {
+    width: 150px;
+  }
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+  }
+}
+
+.icon-size {
+  margin-bottom: -2px;
+  height: 100%;
+  font-size: 1em;
+}
