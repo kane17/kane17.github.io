@@ -7,14 +7,16 @@ import { Component } from '@angular/core';
 })
 export class WidgetChooserComponent {
   selectedWidget: string = '';
-  previous: string = '';
+  widgetIndex: number = 0;
+  widgets = ['pokemon', 'joke', 'nationality', 'crypto'];
 
-  selectRandomWidget() {
-    const widgets = ['pokemon', 'joke', 'nationality', 'crypto'];
-    while (this.selectedWidget ==  this.previous) {
-      this.selectedWidget = widgets[Math.floor(Math.random() * widgets.length)];
+  loadWidget() {
+    this.selectedWidget = this.widgets[this.widgetIndex];
+    if (this.widgetIndex < this.widgets.length - 1) {
+      this.widgetIndex++;
+    } else {
+      this.widgetIndex = 0;
     }
-    this.previous = this.selectedWidget;
   }
 
 }
