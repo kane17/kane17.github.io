@@ -1,0 +1,20 @@
+<mat-card class="widget">
+  <mat-card-header>
+    <mat-card-title>Ich errate deine Nationalität  </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-form-field>
+      <mat-label>Name eingeben</mat-label>
+      <input matInput type="text" [(ngModel)]="name">
+      <button *ngIf="name != ''" matSuffix mat-icon-button aria-label="Clear" (click)="guessNationality()">
+        <mat-icon>close</mat-icon>
+      </button>
+      <mat-error *ngIf="error != ''">{{ error }}</mat-error>
+    </mat-form-field>
+    {{displayGuess | json}}
+  </mat-card-content>
+  <br>
+  <mat-card-actions>
+    <button (click)="guessNationality()" mat-button color="accent" [disabled]="name == ''">Suchen</button>
+  </mat-card-actions>
+</mat-card>

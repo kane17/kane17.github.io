@@ -19,6 +19,10 @@ import {MatInputModule} from "@angular/material/input";
 import {MatIconModule} from "@angular/material/icon";
 import {FormsModule} from "@angular/forms";
 import {NgOptimizedImage} from "@angular/common";
+import { NationalityGuessingComponent } from './nationality-guessing/nationality-guessing.component';
+import {MatListModule} from "@angular/material/list";
+import {MatSliderModule} from "@angular/material/slider";
+import {MatProgressBarModule} from "@angular/material/progress-bar";
 
 @NgModule({
     declarations: [
@@ -26,24 +30,28 @@ import {NgOptimizedImage} from "@angular/common";
         DadJokeComponent,
         AboutMeComponent,
         CryptoCapComponent,
-        PokemonComponent
+        PokemonComponent,
+        NationalityGuessingComponent
     ],
-    imports: [
-        BrowserModule,
-        MatToolbarModule,
-        MatCardModule,
-        MatButtonModule,
-        MatSnackBarModule,
-        HttpClientModule,
-        BrowserAnimationsModule,
-        MatTabsModule,
-        RouterLink,
-        MatGridListModule,
-        MatInputModule,
-        MatIconModule,
-        FormsModule,
-        NgOptimizedImage
-    ],
+  imports: [
+    BrowserModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatButtonModule,
+    MatSnackBarModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatTabsModule,
+    RouterLink,
+    MatGridListModule,
+    MatInputModule,
+    MatIconModule,
+    FormsModule,
+    NgOptimizedImage,
+    MatListModule,
+    MatSliderModule,
+    MatProgressBarModule
+  ],
     providers: [],
     bootstrap: [AppComponent]
 })

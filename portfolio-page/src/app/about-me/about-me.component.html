@@ -1,22 +1,105 @@
-<mat-tab-group animationDuration="500ms" color="accent">
-    <mat-tab label="Who is Keijo?">
-        <mat-card class="content-card">
-            <mat-card-content>Hi! My name is Keijo Nierula. I am a Software Engineer based in Bern, Switzerland.
-                I am currently employed at PostFinance AG and working on my Bachelor's degree.
-                <br>
-                This Portfolio Page should tell a little bit about myself and also I added some fun little widgets to try out, which consume data from APIs.
-                <br>
-                <br>
-                My Interests include Cryptocurrencies, Sports (Football, Basketball), Gaming and Movies.
-            </mat-card-content>
-            <mat-card-actions>
-                My links:
-                <button class="contact-button" mat-raised-button color="primary" onclick="window.location.href='https://github.com/kane17';">GitHub</button>
-                <button class="contact-button" mat-raised-button color="primary" onclick="window.location.href='mailto:keijo.nierula@bluewin.ch';">Contact me</button>
-                <button class="contact-button" mat-raised-button color="primary" onclick="window.location.href='https://www.linkedin.com/in/keijo-n-492429142/';">LinkedIn</button>
-            </mat-card-actions>
-        </mat-card>
-    </mat-tab>
-    <mat-tab label="Work Experience / Education"></mat-tab>
-    <mat-tab label="Skills"></mat-tab>
-</mat-tab-group>
+<mat-card class="content-card">
+  <mat-card-header>
+    <mat-card-title>Über mich</mat-card-title>
+  </mat-card-header>
+  <!-- TODO: Add picture -->
+  <mat-card-content>Hallo! Mein Name ist Keijo Nierula. Ich bin Softwareentwickler und wohne in Bern.
+    Zurzeit bin ich bei der PostFinance AG angestellt und studiere Wirtschaftsinformatik an der Berner Fachhochschule.
+    <br>
+    Diese Portfolioseite soll ein bisschen was über mich erzählen und ich habe auch ein paar lustige kleine Widgets zum
+    Herumspielen hinzugefügt.
+    <br>
+    <br>
+    My Interests include Cryptocurrencies, Sports (Football, Basketball), Gaming and Movies.
+  </mat-card-content>
+  <mat-card-actions>
+    My links:
+    <button class="contact-button" mat-raised-button color="primary"
+            onclick="window.location.href='https://github.com/kane17';">GitHub
+    </button>
+    <!--                <button class="contact-button" mat-raised-button color="primary" onclick="window.location.href='mailto:keijo.nierula@bluewin.ch';">Contact me</button>-->
+    <button class="contact-button" mat-raised-button color="primary"
+            onclick="window.location.href='https://www.linkedin.com/in/keijo-n-492429142/';">LinkedIn
+    </button>
+  </mat-card-actions>
+</mat-card>
+<mat-card class="content-card">
+  <mat-card-header>
+    <mat-card-title>Meine Tätigkeiten</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item>
+        <span matListItemTitle>Software Engineer bei PostFinance AG (2019 - heute)</span>
+        <span matListItemLine>Entwicklung von Business Applikationen in Java mit Spring Boot</span>
+        <span matListItemLine>Konzeption und Entwicklung von Blockchain Applikationen in verschiedenen Use Cases</span>
+        <span matListItemLine>Betrieb und Administration von Hyperledger Fabric Blockchains</span>
+        <span matListItemLine>Betreuung von Lernenden Informatiker EFZ</span>
+        <span matListItemLine>Entwicklung und Betrieb von produktiven Applikationen nach dem DevOps Ansatz</span>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
+<mat-card class="content-card">
+  <mat-card-header>
+    <mat-card-title>Ausbildung</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item>
+        <span matListItemTitle>Bachelor of Science in Wirtschaftsinformatik</span>
+        <span matListItemLine>Berner Fachhochschule</span>
+        <span matListItemLine>(2021 - heute)</span>
+        <span matListItemLine>Vertiefung in Business Data Analytics</span>
+      </mat-list-item>
+      <br>
+      <mat-list-item>
+        <span matListItemTitle>Informatiker EFZ</span>
+        <span matListItemLine>PostFinance AG</span>
+        <span matListItemLine>(2015 - 2019)</span>
+        <span matListItemLine>Fachrichtung Applikationsentwicklung</span>
+        <span matListItemLine>mit Berufsmaturität</span>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
+<mat-card class="content-card">
+  <mat-card-header>
+    <mat-card-title>Meine Skills</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item>
+        <span matListItemTitle>Java</span>
+        <span matListItemLine><mat-progress-bar mode="determinate" value="80"></mat-progress-bar></span>
+      </mat-list-item>
+      <mat-list-item>
+        <span matListItemTitle>Hyperledger Fabric</span>
+        <span matListItemLine><mat-progress-bar mode="determinate" value="75"></mat-progress-bar></span>
+      </mat-list-item>
+      <mat-list-item>
+        <span matListItemTitle>Scrum</span>
+        <span matListItemLine><mat-progress-bar mode="determinate" value="70"></mat-progress-bar></span>
+      </mat-list-item>
+      <mat-list-item>
+        <span matListItemTitle>DevOps (Gitlab, Kubernetes)</span>
+        <span matListItemLine><mat-progress-bar mode="determinate" value="80"></mat-progress-bar></span>
+      </mat-list-item>
+      <mat-list-item>
+        <span matListItemTitle>Angular / Typescript</span>
+        <span matListItemLine><mat-progress-bar mode="determinate" value="50"></mat-progress-bar></span>
+      </mat-list-item>
+      <mat-list-item>
+        <span matListItemTitle>R</span>
+        <span matListItemLine><mat-progress-bar mode="determinate" value="45"></mat-progress-bar></span>
+      </mat-list-item>
+      <mat-list-item>
+        <span matListItemTitle>Golang</span>
+        <span matListItemLine><mat-progress-bar mode="determinate" value="30"></mat-progress-bar></span>
+      </mat-list-item>
+    </mat-list>
+    </mat-card-content>
+</mat-card>
+
+
+
