@@ -1,23 +1,23 @@
 <mat-card class="widget">
     <mat-card-header class="center-card-elements">
-        <mat-card-title>Crypto Prices in USD</mat-card-title>
+        <mat-card-title>Krypto Kurs in USD</mat-card-title>
     </mat-card-header>
     <br>
     <mat-card-content>
         <p>
             <img src="assets/images/bitcoin-btc-2194121696.png" class="icon"> Bitcoin: {{btcPrice | number }}
             <br>
-            Supply: {{btcSupply | number }}
+            Menge: {{btcSupply | number }}
         </p>
         <br>
         <p>
             <img src="assets/images/ethereum-logo1_1-2578122602.png" class="icon"> Ethereum: {{ethPrice | number}}
             <br>
-            Supply: {{ethSupply | number}}
+            Menge: {{ethSupply | number}}
         </p>
     </mat-card-content>
     <br>
     <mat-card-actions class="center-card-elements">
-        <button (click)="getCryptoInfo()" mat-raised-button color="accent">Refresh</button>
+        <button (click)="getCryptoInfo()" mat-raised-button color="primary">Aktualisieren</button>
     </mat-card-actions>
 </mat-card>
