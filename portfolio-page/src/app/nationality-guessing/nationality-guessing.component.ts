@@ -12,10 +12,9 @@ export class NationalityGuessingComponent {
   apiGuess: any = {};
   displayGuess: {german: string, probability: number, id: string}[] = [];
   countryCodes: {[key: string]: string} = {};
-  displayedColumns: string[] = ['german', 'probability'];
 
   constructor(private http: HttpClient) {
-    this.http.get<any>('../../assets/i18n/de.json').subscribe(data => {
+    this.http.get<any>('assets/i18n/de.json').subscribe(data => {
       this.countryCodes = data['COUNTRY_CODES'] as {[key: string]: string};
     })
   }

@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {MatSnackBar} from "@angular/material/snack-bar";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {DadJoke} from "./interface/dad-joke";
 
@@ -12,7 +11,7 @@ export class DadJokeComponent {
 
     public joke: string = "";
 
-    constructor(private _snackBar: MatSnackBar, private http: HttpClient) {
+    constructor(private http: HttpClient) {
         this.refreshDadJoke();
     }
 

@@ -9,35 +9,32 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {HttpClientModule} from "@angular/common/http";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import { AboutMeComponent } from './about-me/about-me.component';
-import {MatTabsModule} from "@angular/material/tabs";
-import { CryptoCapComponent } from './crypto-cap/crypto-cap.component';
+import {AboutMeComponent} from './about-me/about-me.component';
+import {CryptoCapComponent} from './crypto-cap/crypto-cap.component';
 import {RouterLink} from "@angular/router";
 import {MatGridListModule} from "@angular/material/grid-list";
-import { PokemonComponent } from './pokemon/pokemon.component';
+import {PokemonComponent} from './pokemon/pokemon.component';
 import {MatInputModule} from "@angular/material/input";
 import {MatIconModule} from "@angular/material/icon";
 import {FormsModule} from "@angular/forms";
 import {NgOptimizedImage} from "@angular/common";
-import { NationalityGuessingComponent } from './nationality-guessing/nationality-guessing.component';
+import {NationalityGuessingComponent} from './nationality-guessing/nationality-guessing.component';
 import {MatListModule} from "@angular/material/list";
-import {MatSliderModule} from "@angular/material/slider";
 import {MatProgressBarModule} from "@angular/material/progress-bar";
-import { WidgetChooserComponent } from './widget-chooser/widget-chooser.component';
-import {MatTableModule} from "@angular/material/table";
-import { ProbabilityMultiplierPipe } from './probability-multiplier.pipe';
+import {WidgetChooserComponent} from './widget-chooser/widget-chooser.component';
+import {ProbabilityMultiplierPipe} from './probability-multiplier.pipe';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        DadJokeComponent,
-        AboutMeComponent,
-        CryptoCapComponent,
-        PokemonComponent,
-        NationalityGuessingComponent,
-        WidgetChooserComponent,
-        ProbabilityMultiplierPipe
-    ],
+  declarations: [
+    AppComponent,
+    DadJokeComponent,
+    AboutMeComponent,
+    CryptoCapComponent,
+    PokemonComponent,
+    NationalityGuessingComponent,
+    WidgetChooserComponent,
+    ProbabilityMultiplierPipe
+  ],
   imports: [
     BrowserModule,
     MatToolbarModule,
@@ -46,7 +43,6 @@ import { ProbabilityMultiplierPipe } from './probability-multiplier.pipe';
     MatSnackBarModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatTabsModule,
     RouterLink,
     MatGridListModule,
     MatInputModule,
@@ -54,12 +50,10 @@ import { ProbabilityMultiplierPipe } from './probability-multiplier.pipe';
     FormsModule,
     NgOptimizedImage,
     MatListModule,
-    MatSliderModule,
     MatProgressBarModule,
-    MatTableModule
   ],
-    providers: [],
-    bootstrap: [AppComponent]
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule {
 }
