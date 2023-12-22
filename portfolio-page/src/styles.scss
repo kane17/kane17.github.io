@@ -16,17 +16,38 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   }
 }
 
+@media screen and (min-width: 480px) {
+  .widget {
+    width: 250px;
+    max-width: 250px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .widget {
+    width: 350px;
+    max-width: 350px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .widget {
-    width: 700px;
-    max-width: 600px;
+    width: 450px;
+    max-width: 450px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .widget {
-    width: 800px;
-    max-width: 800px;
+    width: 600px;
+    max-width: 600px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    .widget {
+      width: 800px;
+      max-width: 800px;
+    }
   }
 }
 
